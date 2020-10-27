@@ -5,8 +5,8 @@ OS ?= linux
 ARCH ?= ??? 
 ALL_ARCH ?= arm64 amd64
 DOCKER_IMAGE ?= raquette/logstash-oss
-VERSION = 7.9.3
-TAG ?= v${VERSION|
+VERSION = "7.9.3"
+TAG ?= v${VERSION}
 REPOSITORY_GENERIC = ${DOCKER_IMAGE}:${TAG}
 REPOSITORY_ARCH = ${DOCKER_IMAGE}:${TAG}-${ARCH}
 
