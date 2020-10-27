@@ -6,10 +6,10 @@ RUN echo deb https://artifacts.elastic.co/packages/oss-7.x/apt stable main > /et
 RUN apt-get update && apt-get install -y apt-transport-https default-jre
 RUN apt-get install -y logstash-oss
 
-COPY logstash.conf /logstash/
-WORKDIR /logstash
-VOLUME /logstash
+COPY logstash.conf /pipeline/
+WORKDIR /pipeline
+VOLUME /pipeline
 
 ENTRYPOINT ["/usr/share/logstash/bin/logstash"]
-CMD ["-f", "/logstash/logstash.conf"]
+CMD ["-f", "/pipeline/"]
 

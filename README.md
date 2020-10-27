@@ -3,10 +3,8 @@
 Mixed architecture logstash image
 
 
-UPDATE THIS
 ```
-docker run --rm -it -v PATH_TO_LOCAL_PLAYBOOKS_DIR:/ansible/playbooks philm/ansible_playbook PLAYBOOK_FILE
+docker run --rm -it -v DIRECTORY_OF_PIPELINE_FILES:/pipeline/ docker.elastic.co/logstash/logstash:7.9.3
 ```
 
-Fill this in
 
