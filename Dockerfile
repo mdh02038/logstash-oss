@@ -9,7 +9,7 @@ RUN apt-get update && apt-get install -y \
     gosu
 RUN wget -qO - https://packages.elastic.co/GPG-KEY-elasticsearch | apt-key add -
 RUN echo deb https://artifacts.elastic.co/packages/oss-7.x/apt stable main > /etc/apt/sources.list.d/elastic-oss-7.x.list
-RUN apt-get update && apt-get install -y logstash-oss=1:$LOGSTASH_VERSION
+RUN apt-get update && apt-get install -y logstash-oss=$LOGSTASH_VERSION
 
 COPY logstash.conf /pipeline/
 COPY docker-entrypoint.sh /usr/bin
